@@ -1,0 +1,117 @@
+.about {
+  padding: var(--spacing-xxl) 0;
+  
+  &__container {
+    @include container;
+    @include flex(column, center, center, var(--spacing-xl));
+    
+    @include responsive('md') {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+  
+  &__image {
+    flex: 1;
+    max-width: 500px;
+    
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: var(--border-radius-md);
+      box-shadow: var(--shadow-md);
+      object-fit: cover;
+    }
+  }
+  
+  &__content {
+    flex: 1;
+    
+    &-title {
+      margin-bottom: var(--spacing-md);
+      
+      h2 {
+        margin-bottom: var(--spacing-xs);
+      }
+      
+      .subtitle {
+        color: var(--primary-color);
+        font-weight: 500;
+      }
+    }
+    
+    &-text {
+      margin-bottom: var(--spacing-md);
+      
+      p {
+        margin-bottom: var(--spacing-sm);
+        color: var(--text-color-light);
+      }
+    }
+  }
+  
+  &__skills {
+    margin-top: var(--spacing-lg);
+    
+    &-title {
+      margin-bottom: var(--spacing-md);
+    }
+    
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-md);
+      
+      @include responsive('md') {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    &-item {
+      @include fade-in;
+      
+      &-name {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: var(--spacing-xs);
+        
+        span {
+          font-weight: 500;
+        }
+        
+        .percentage {
+          color: var(--text-color-light);
+        }
+      }
+      
+      &-bar {
+        height: 8px;
+        background-color: var(--bg-color-secondary);
+        border-radius: 4px;
+        overflow: hidden;
+        
+        .fill {
+          height: 100%;
+          background-color: var(--primary-color);
+          border-radius: 4px;
+          width: 0;
+          transition: width 1.5s ease-in-out;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: map-get($breakpoints, 'md') - 1) {
+    &__image {
+      margin-bottom: var(--spacing-lg);
+    }
+    
+    &__content {
+      text-align: center;
+    }
+    
+    &__skills-list {
+      grid-template-columns: 1fr;
+    }
+  }
+}

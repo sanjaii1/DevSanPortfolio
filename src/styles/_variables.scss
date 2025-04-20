@@ -1,0 +1,86 @@
+// CSS Variables for theming
+:root {
+  // Light theme (default)
+  --primary-color: #6366f1;
+  --primary-color-light: #818cf8;
+  --primary-color-dark: #4f46e5;
+  
+  --secondary-color: #10b981;
+  --secondary-color-light: #34d399;
+  --secondary-color-dark: #059669;
+  
+  --accent-color: #f97316;
+  --accent-color-light: #fb923c;
+  --accent-color-dark: #ea580c;
+  
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --error-color: #ef4444;
+  
+  --bg-color: #ffffff;
+  --bg-color-secondary: #f3f4f6;
+  --text-color: #1f2937;
+  --text-color-light: #6b7280;
+  --border-color: #e5e7eb;
+  
+  // Spacing system (base 8px)
+  --spacing-xs: 0.5rem;    // 8px
+  --spacing-sm: 1rem;      // 16px
+  --spacing-md: 1.5rem;    // 24px
+  --spacing-lg: 2rem;      // 32px
+  --spacing-xl: 3rem;      // 48px
+  --spacing-xxl: 5rem;     // 80px
+  
+  // Component specific variables
+  --navbar-height: 5rem;
+  --footer-height: 4rem;
+  
+  // Border radius
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 1rem;
+  
+  // Shadows
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  
+  // Transition
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+// Dark theme
+[data-theme="dark"] {
+  --primary-color: #818cf8;
+  --primary-color-light: #a5b4fc;
+  --primary-color-dark: #6366f1;
+  
+  --secondary-color: #34d399;
+  --secondary-color-light: #6ee7b7;
+  --secondary-color-dark: #10b981;
+  
+  --accent-color: #fb923c;
+  --accent-color-light: #fdba74;
+  --accent-color-dark: #f97316;
+  
+  --bg-color: #111827;
+  --bg-color-secondary: #1f2937;
+  --text-color: #f9fafb;
+  --text-color-light: #d1d5db;
+  --border-color: #374151;
+  
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.26);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.25);
+}
+
+// Media query breakpoints
+$breakpoints: (
+  'sm': 640px,
+  'md': 768px,
+  'lg': 1024px,
+  'xl': 1280px,
+  '2xl': 1536px,
+);
