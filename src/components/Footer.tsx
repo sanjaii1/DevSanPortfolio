@@ -5,10 +5,10 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   const socialLinks = [
-    { icon: <Github size={18} />, url: 'https://github.com/johndoe', label: 'GitHub' },
-    { icon: <Linkedin size={18} />, url: 'https://linkedin.com/in/johndoe', label: 'LinkedIn' },
-    { icon: <Twitter size={18} />, url: 'https://twitter.com/johndoe', label: 'Twitter' },
-    { icon: <Mail size={18} />, url: 'mailto:contact@johndoe.com', label: 'Email' },
+    { icon: <Github size={18} />, url: 'https://github.com/sanjaii1', label: 'GitHub' },
+    { icon: <Linkedin size={18} />, url: 'https://www.linkedin.com/in/sanjaii1/', label: 'LinkedIn' },
+    // { icon: <Twitter size={18} />, url: 'https://twitter.com/johndoe', label: 'Twitter' },
+    { icon: <Mail size={18} />, url: 'mailto:bsanjay235@gmail.com', label: 'Email' },
   ];
   
   return (
@@ -20,7 +20,7 @@ const Footer = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          © {currentYear} John Doe. All Rights Reserved.
+          © {currentYear} Sanjai Babu. All Rights Reserved.
         </motion.p>
         
         <motion.ul 
