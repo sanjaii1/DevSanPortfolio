@@ -9,21 +9,21 @@ const Contact = () => {
     subject: '',
     message: ''
   });
-  
+
   const [formStatus, setFormStatus] = useState<{
     submitted: boolean;
     success: boolean;
     message: string;
   } | null>(null);
-  
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
-  
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Validate form
     if (!formData.name || !formData.email || !formData.message) {
       setFormStatus({
@@ -33,7 +33,7 @@ const Contact = () => {
       });
       return;
     }
-    
+
     // Simulate form submission
     setTimeout(() => {
       setFormStatus({
@@ -41,7 +41,7 @@ const Contact = () => {
         success: true,
         message: 'Your message has been sent successfully. I will get back to you soon!'
       });
-      
+
       // Reset form after successful submission
       setFormData({
         name: '',
@@ -49,20 +49,20 @@ const Contact = () => {
         subject: '',
         message: ''
       });
-      
+
       // Clear success message after 5 seconds
       setTimeout(() => {
         setFormStatus(null);
       }, 5000);
     }, 1000);
   };
-  
+
   const pageVariants = {
     initial: { opacity: 0 },
     animate: { opacity: 1, transition: { duration: 0.5 } },
     exit: { opacity: 0, transition: { duration: 0.3 } }
   };
-  
+
   const contactInfo = [
     {
       icon: <Mail />,
@@ -80,10 +80,10 @@ const Contact = () => {
       icon: <MapPin />,
       label: 'Location',
       value: 'Kozhikode',
-      link: "https://maps.app.goo.gl/mtqj32q5B6RZVorS9"
+      link: "https://maps.app.goo.gl/yBjxfyrt87Vsp8Qo6"
     }
   ];
-  
+
   return (
     <motion.div
       variants={pageVariants}
@@ -93,7 +93,7 @@ const Contact = () => {
     >
       <section className="section contact">
         <div className="contact__container">
-          <motion.div 
+          <motion.div
             className="contact__content"
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -103,16 +103,16 @@ const Contact = () => {
               <p className="subtitle">Get In Touch</p>
               <h2>Let's Discuss Your Project</h2>
             </div>
-            
+
             <p className="contact__content-text">
-              I'm interested in freelance opportunities – especially ambitious or large projects. 
+              I'm interested in freelance opportunities – especially ambitious or large projects.
               However, if you have other requests or questions, don't hesitate to contact me using the form.
             </p>
-            
+
             <div className="contact__content-info">
               {contactInfo.map((info, index) => (
-                <motion.div 
-                  key={index} 
+                <motion.div
+                  key={index}
                   className="contact__content-info-item"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -131,8 +131,8 @@ const Contact = () => {
               ))}
             </div>
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             className="contact__form"
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -156,7 +156,7 @@ const Contact = () => {
                 <span style={{ marginLeft: '0.5rem' }}>{formStatus.message}</span>
               </motion.div>
             )}
-            
+
             <form onSubmit={handleSubmit}>
               <div className="contact__form-group">
                 <label htmlFor="name">Name*</label>
@@ -169,7 +169,7 @@ const Contact = () => {
                   required
                 />
               </div>
-              
+
               <div className="contact__form-group">
                 <label htmlFor="email">Email*</label>
                 <input
@@ -181,7 +181,7 @@ const Contact = () => {
                   required
                 />
               </div>
-              
+
               <div className="contact__form-group">
                 <label htmlFor="subject">Subject</label>
                 <input
@@ -192,7 +192,7 @@ const Contact = () => {
                   onChange={handleChange}
                 />
               </div>
-              
+
               <div className="contact__form-group">
                 <label htmlFor="message">Message*</label>
                 <textarea
@@ -203,7 +203,7 @@ const Contact = () => {
                   required
                 />
               </div>
-              
+
               <motion.button
                 type="submit"
                 className="button primary contact__form-button"
@@ -217,17 +217,17 @@ const Contact = () => {
           </motion.div>
         </div>
       </section>
-      
+
       {/* Map Section */}
-      <section className="section" style={{ padding: 0 }}>
+      <section className="section" style={{ padding: '10px' }}>
         <div style={{ height: '400px', width: '100%' }}>
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m15!1m10!1m3!1d172!2d75.7609122!3d11.5658964!2m1!1f121.09!3m2!1i1024!2i768!4f35!3m2!1m1!2zMTHCsDMzJzU4LjIiTiA3NcKwNDUnMzkuNyJF!5e1!3m2!1sen!2sin!4v1745259137701!5m2!1sen!2sin"
-            width="100%" 
-            height="100%" 
-            style={{ border: 0 }} 
-            allowFullScreen 
-            loading="lazy" 
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d1954.4018546142847!2d75.761193!3d11.565925!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTHCsDMzJzU4LjIiTiA3NcKwNDUnMzkuNyJF!5e0!3m2!1sen!2sin!4v1752693202786!5m2!1sen!2sin"
+            width="100%"
+            height="400"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             title="Map location"
           ></iframe>
