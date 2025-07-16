@@ -9,44 +9,44 @@ const About = () => {
   const toolsAndOtherSkills = [...getSkillsByCategory('tools'), ...getSkillsByCategory('other')];
   
   const stats = [
-    { icon: <Calendar size={24} />, value: '5+', label: 'Years Experience' },
-    { icon: <Award size={24} />, value: '20+', label: 'Projects Completed' },
-    { icon: <Users size={24} />, value: '10+', label: 'Happy Clients' },
+    { icon: <Calendar size={24} />, value: '1.5+', label: 'Years Experience' },
+    { icon: <Award size={24} />, value: '10+', label: 'Projects Completed' },
+    { icon: <Users size={24} />, value: '5+', label: 'Happy Clients' },
   ];
   
   const experiences = [
     {
-      title: 'Senior Frontend Developer',
-      company: 'TechCorp',
-      period: '2022 - Present',
-      description: 'Lead the frontend development team in building responsive web applications. Implement modern JavaScript frameworks and optimize performance.'
+      title: 'Software Developer',
+      company: 'Marketlube',
+      period: '2024, Dec 9 - Present',
+      description: 'Developed visually engaging websites featuring rich animations and interactive user experiences using modern front-end technologies. Built and maintained full-stack web applications, integrating frontend and backend systems for seamless performance. Leveraged AI-powered tools and APIs to automate features and enhance website functionality and user personalization. Collaborated on CRM system improvements, optimizing user flows and enhancing data integration and reporting capabilities.'
     },
     {
-      title: 'Web Developer',
-      company: 'Digital Agency',
-      period: '2020 - 2022',
-      description: 'Developed and maintained client websites and web applications. Worked with React, Node.js, and various CMS platforms.'
+      title: 'Software Developer',
+      company: 'Frugal Scientific Pvt. Ltd.',
+      period: '2023, May - 2024, Oct',
+      description: 'Built and maintained dynamic, responsive web applications using React.js, ensuring compatibility across various devices and browsers. Implemented user interfaces with React Core UI components to deliver consistent and efficient user experiences. Utilized React Material-UI to design visually appealing interfaces following modern design principles. Troubleshooted and resolved software issues to ensure uninterrupted operations for platforms like SmarterHomes and Torus. Consistently met project deadlines while contributing to the successful development and delivery of robust solutions.'
     },
     {
-      title: 'Junior Developer',
-      company: 'Startup Inc',
-      period: '2018 - 2020',
-      description: 'Assisted in the development of web applications and implemented UI designs. Collaborated with cross-functional teams.'
+      title: 'Front End Developer Intern',
+      company: 'Full-stack Developer Academy',
+      period: '2022, Dec - 2023, May',
+      description: 'Utilized HTML, CSS, Bootstrap, and JavaScript to create visually appealing and responsive web applications. Designed dynamic user interfaces with precision and interactivity to ensure a seamless user experience. Applied ES6+ features to write clean and efficient JavaScript code, leveraging modern language capabilities. Developed robust back-end services using Node.js and Express, creating RESTful APIs for handling CRUD (Create, Read, Update, Delete) operations. Managed application data with databases like MongoDB and MySQL, implementing efficient querying and indexing strategies.'
     }
   ];
   
   const education = [
     {
-      degree: 'B.S. in Computer Science',
-      institution: 'University of Technology',
-      period: '2014 - 2018',
-      description: 'Focused on web technologies, databases, and software engineering principles.'
+      degree: 'B.Tech, Mechanical Engineering',
+      institution: 'Jyothi Engineering College, Kerala Technical University',
+      period: '2015 - 2019',
+      description: 'Mechanical Engineering'
     },
     {
-      degree: 'Web Development Bootcamp',
-      institution: 'Code Academy',
-      period: '2018',
-      description: 'Intensive 12-week program covering modern web development technologies and best practices.'
+      degree: '10+2, Science',
+      institution: 'Perambra Higher Secondary School',
+      period: '2004 - 2008',
+      description: 'Science'
     }
   ];
   
@@ -86,7 +86,7 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               <p className="subtitle">About Me</p>
-              <h2>A passionate Web Developer based in New York</h2>
+              <h2>SOFTWARE DEVELOPER</h2>
             </motion.div>
             
             <motion.div 
@@ -96,14 +96,13 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <p>
-                Hello! I'm John Doe, a professional web developer with 5+ years of experience in creating responsive and functional web applications. I specialize in both frontend and backend development, with a strong focus on user experience and performance optimization.
+                Expert MERN stack developer with a proven track record of building high-performance, scalable, and user-focused web applications. Proficient in React.js, Redux, Node.js, Express.js, and MongoDB, with deep expertise in modern JavaScript (ES6+), HTML5, and CSS3. Skilled in writing clean, maintainable code and following industry best practices. Experienced in agile environments, automated development workflows, and version control using Git. Dedicated to delivering reliable, secure, and optimized solutions that align with business goals and enhance user experience.
               </p>
-              <p>
-                My journey in web development began during my Computer Science studies when I discovered my passion for creating digital experiences. Since then, I've worked with various technologies and frameworks to deliver high-quality solutions for clients across different industries.
-              </p>
-              <p>
-                I believe in writing clean, maintainable code and staying up-to-date with the latest industry trends and best practices. My goal is to create websites and applications that not only look great but also provide excellent user experiences.
-              </p>
+              <p><b>Email:</b> bsanjay235@gmil.com</p>
+              <p><b>Address:</b> Sreenadhanam House, Thendankkandy Meethal, Perambra post, Kozhikode, Pin- 673525</p>
+              <p><b>Phone:</b> 723361859</p>
+              <p><b>GitHub:</b> <a href="https://github.com/sanjaii1" target="_blank" rel="noopener noreferrer">sanjaii1</a></p>
+              <p><b>LinkedIn:</b> <a href="http://www.linkedin.com/in/sanjaii1" target="_blank" rel="noopener noreferrer">www.linkedin.com/in/sanjaii1</a></p>
             </motion.div>
             
             <motion.div 
