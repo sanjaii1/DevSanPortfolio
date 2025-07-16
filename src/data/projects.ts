@@ -15,128 +15,217 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: 'ecommerce-platform',
-    title: 'E-Commerce Platform',
+    id: 'rarichans-coconut-productl',
+    title: "RARICHAN'S COCONUT PRODUCTL",
     category: 'Web Development',
-    description: 'A fully responsive e-commerce platform with product filtering, cart functionality, and payment integration.',
-    longDescription: 'This e-commerce platform was built using React, Node.js, and MongoDB. It features a responsive design, product search and filtering, shopping cart functionality, user authentication, and Stripe payment integration. The admin dashboard allows for product and order management.',
-    image: 'https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Express', 'Stripe'],
+    description: 'Corporate website for coconut product company.',
+    longDescription: 'Developed a modern, responsive website for Rarichan\'s Coconut Productl, showcasing products and company information.',
+    image: 'https://www.rarichanscoconut.com/assets/images/logo.png',
+    technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
     features: [
+      'Product showcase',
       'Responsive design',
-      'Product search and filtering',
-      'Shopping cart functionality',
-      'User authentication',
-      'Admin dashboard',
-      'Payment integration'
-    ],
-    githubUrl: 'https://github.com/johndoe/ecommerce-platform',
-    liveUrl: 'https://ecommerce-platform.example.com',
-    year: 2023,
-    client: 'RetailCo'
-  },
-  {
-    id: 'task-management-app',
-    title: 'Task Management App',
-    category: 'Web Application',
-    description: 'A drag-and-drop task management application with team collaboration features.',
-    longDescription: 'The Task Management App is a Trello-like application built with React and Firebase. It allows users to create boards, lists, and cards, and features drag-and-drop functionality for easy task organization. The app supports team collaboration with real-time updates.',
-    image: 'https://images.pexels.com/photos/3243/pen-calendar-to-do-checklist.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    technologies: ['React', 'Firebase', 'Redux', 'Material UI'],
-    features: [
-      'Drag-and-drop interface',
-      'Real-time collaboration',
-      'Task assignments',
-      'Due dates and reminders',
-      'Activity log',
-      'File attachments'
-    ],
-    githubUrl: 'https://github.com/johndoe/task-management-app',
-    liveUrl: 'https://task-management-app.example.com',
-    year: 2022,
-    client: 'ProductivityLabs'
-  },
-  {
-    id: 'fitness-tracker',
-    title: 'Fitness Tracker',
-    category: 'Mobile App',
-    description: 'A fitness tracking application for tracking workouts, nutrition, and progress.',
-    longDescription: 'The Fitness Tracker is a comprehensive application built with React Native. It allows users to track their workouts, log nutritional information, set goals, and visualize their progress over time. The app also provides custom workout recommendations based on user goals.',
-    image: 'https://images.pexels.com/photos/3912371/pexels-photo-3912371.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    technologies: ['React Native', 'Firebase', 'Redux', 'D3.js'],
-    features: [
-      'Workout tracking',
-      'Nutrition logging',
-      'Goal setting',
-      'Progress visualization',
-      'Custom workout recommendations',
-      'Social sharing'
-    ],
-    githubUrl: 'https://github.com/johndoe/fitness-tracker',
-    liveUrl: 'https://fitness-tracker.example.com',
-    year: 2023,
-    client: 'FitLife'
-  },
-  {
-    id: 'real-estate-platform',
-    title: 'Real Estate Platform',
-    category: 'Web Development',
-    description: 'A comprehensive real estate platform for property listings, searches, and agent management.',
-    longDescription: 'This real estate platform was built with Next.js and integrates with a RESTful API. It features property listings with advanced search functionality, virtual tours, agent profiles, and a scheduling system for property viewings.',
-    image: 'https://images.pexels.com/photos/1546168/pexels-photo-1546168.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    technologies: ['Next.js', 'Node.js', 'PostgreSQL', 'Google Maps API'],
-    features: [
-      'Property listings',
-      'Advanced search functionality',
-      'Virtual tours',
-      'Agent profiles',
-      'Viewing scheduling',
-      'Map integration'
-    ],
-    githubUrl: 'https://github.com/johndoe/real-estate-platform',
-    liveUrl: 'https://real-estate-platform.example.com',
-    year: 2022,
-    client: 'HomeFinderPro'
-  },
-  {
-    id: 'recipe-sharing-app',
-    title: 'Recipe Sharing App',
-    category: 'Web Application',
-    description: 'A community-driven recipe sharing platform with social features and cooking tutorials.',
-    longDescription: 'The Recipe Sharing App is a community-driven platform built with Vue.js and Django. It allows users to create, share, and discover recipes, follow other users, save favorites, and access step-by-step cooking tutorials.',
-    image: 'https://images.pexels.com/photos/4144234/pexels-photo-4144234.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    technologies: ['Vue.js', 'Django', 'PostgreSQL', 'AWS S3'],
-    features: [
-      'Recipe creation and sharing',
-      'Social following',
-      'Favorites and collections',
-      'Step-by-step tutorials',
-      'Ingredient search',
-      'Nutritional information'
-    ],
-    githubUrl: 'https://github.com/johndoe/recipe-sharing-app',
-    liveUrl: 'https://recipe-sharing-app.example.com',
-    year: 2021,
-    client: 'CookingCommunity'
-  },
-  {
-    id: 'portfolio-website',
-    title: 'Portfolio Website',
-    category: 'Web Design',
-    description: 'A modern portfolio website with animations and responsive design.',
-    longDescription: 'This portfolio website was designed and built using React, SCSS, and Framer Motion. It features smooth animations, a responsive design, and an intuitive user interface to showcase projects and skills effectively.',
-    image: 'https://images.pexels.com/photos/196645/pexels-photo-196645.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    technologies: ['React', 'SCSS', 'Framer Motion', 'Figma'],
-    features: [
-      'Responsive design',
-      'Smooth animations',
-      'Project showcase',
-      'Skills visualization',
       'Contact form',
-      'Dark/light mode'
+      'SEO optimized'
     ],
-    githubUrl: 'https://github.com/johndoe/portfolio-website',
-    liveUrl: 'https://johndoe-portfolio.example.com',
+    liveUrl: 'https://www.rarichanscoconut.com',
+    year: 2023
+  },
+  {
+    id: 'thilakkam-fancy-mall',
+    title: 'THILLAKKAM FANCY MALL',
+    category: 'Web Development',
+    description: 'E-commerce website for a fancy mall.',
+    longDescription: 'Built an e-commerce platform for Thilakkam Fancy Mall, enabling online product browsing and purchasing.',
+    image: 'https://thilakkamfancy.in/assets/images/logo.png',
+    technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
+    features: [
+      'E-commerce functionality',
+      'Product catalog',
+      'Shopping cart',
+      'Responsive design'
+    ],
+    liveUrl: 'https://thilakkamfancy.in',
+    year: 2023
+  },
+  {
+    id: 'hawksee',
+    title: 'HAWKSEE',
+    category: 'Web Development',
+    description: 'Agency website for Hawksee.',
+    longDescription: 'Developed a professional agency website for Hawksee, focusing on branding and lead generation.',
+    image: 'https://hawksee.agency/logo.png',
+    technologies: ['React', 'Next.js', 'Node.js'],
+    features: [
+      'Brand showcase',
+      'Contact form',
+      'Responsive design'
+    ],
+    liveUrl: 'https://hawksee.agency/',
+    year: 2023
+  },
+  {
+    id: 'limotex',
+    title: 'LIMOTEX',
+    category: 'Web Development',
+    description: 'Corporate website for Limotex.',
+    longDescription: 'Created a modern, responsive website for Limotex to highlight their services and products.',
+    image: 'https://limotex.in/logo.png',
+    technologies: ['React', 'Node.js'],
+    features: [
+      'Service showcase',
+      'Contact form',
+      'Responsive design'
+    ],
+    liveUrl: 'https://limotex.in/',
+    year: 2023
+  },
+  {
+    id: 'skymark',
+    title: 'SKYMARK',
+    category: 'Web Development',
+    description: 'Corporate website for Skymark.',
+    longDescription: 'Developed a responsive website for Skymark, focusing on company profile and service offerings.',
+    image: 'https://www.skymark.in/logo.png',
+    technologies: ['React', 'Node.js'],
+    features: [
+      'Company profile',
+      'Service showcase',
+      'Responsive design'
+    ],
+    liveUrl: 'https://www.skymark.in/',
+    year: 2023
+  },
+  {
+    id: 'drshareef',
+    title: 'DRSHAREEF',
+    category: 'Web Development',
+    description: 'Professional website for Dr. Shareef.',
+    longDescription: 'Developed a professional website for Dr. Shareef to showcase services and provide contact information.',
+    image: '',
+    technologies: ['React', 'Node.js'],
+    features: [
+      'Professional profile',
+      'Contact form',
+      'Responsive design'
+    ],
+    year: 2023
+  },
+  {
+    id: 'hiline',
+    title: 'HILINE',
+    category: 'Web Development',
+    description: 'Landing page for Hiline Developers.',
+    longDescription: 'Created a high-converting landing page for Hiline Developers.',
+    image: 'https://www.hilinedevelopers.com/lander/logo.png',
+    technologies: ['React', 'Node.js'],
+    features: [
+      'Landing page',
+      'Lead capture',
+      'Responsive design'
+    ],
+    liveUrl: 'https://www.hilinedevelopers.com/lander',
+    year: 2023
+  },
+  {
+    id: 'motorcraze',
+    title: 'MOTORCRAZE',
+    category: 'Web Development',
+    description: 'Automotive e-commerce website.',
+    longDescription: 'Developed an e-commerce website for Motorcraze, specializing in automotive products.',
+    image: 'https://www.motocraze.co.in/logo.png',
+    technologies: ['React', 'Node.js', 'MongoDB'],
+    features: [
+      'E-commerce functionality',
+      'Product catalog',
+      'Shopping cart',
+      'Responsive design'
+    ],
+    liveUrl: 'https://www.motocraze.co.in/',
+    year: 2023
+  },
+  {
+    id: 'lalsonelectronics',
+    title: 'LALSONELECTRONICS',
+    category: 'Web Development',
+    description: 'Corporate website for Lalson Electronics.',
+    longDescription: 'Developed a modern, responsive website for Lalson Electronics.',
+    image: 'https://www.lalsonselectronics.com/logo.png',
+    technologies: ['React', 'Node.js'],
+    features: [
+      'Product showcase',
+      'Contact form',
+      'Responsive design'
+    ],
+    liveUrl: 'https://www.lalsonselectronics.com/',
+    year: 2023
+  },
+  {
+    id: 'luxart',
+    title: 'LUXART',
+    category: 'Web Development',
+    description: 'Corporate website for Luxart Builders.',
+    longDescription: 'Created a modern, responsive website for Luxart Builders.',
+    image: 'https://www.luxartbuilders.com/logo.png',
+    technologies: ['React', 'Node.js'],
+    features: [
+      'Service showcase',
+      'Contact form',
+      'Responsive design'
+    ],
+    liveUrl: 'https://www.luxartbuilders.com/',
+    year: 2023
+  },
+  {
+    id: 'habitat',
+    title: 'HABITAT',
+    category: 'Web Development',
+    description: 'Project for Habitat.',
+    longDescription: 'Developed a web project for Habitat.',
+    image: '',
+    technologies: ['React', 'Node.js'],
+    features: [
+      'Responsive design'
+    ],
+    year: 2023
+  },
+  {
+    id: 'skillhand',
+    title: 'SKILLHAND',
+    category: 'Web Development',
+    description: 'Project for Skillhand.',
+    longDescription: 'Developed a web project for Skillhand.',
+    image: '',
+    technologies: ['React', 'Node.js'],
+    features: [
+      'Responsive design'
+    ],
+    year: 2023
+  },
+  {
+    id: 'yas',
+    title: 'YAS',
+    category: 'Web Development',
+    description: 'Project for YAS.',
+    longDescription: 'Developed a web project for YAS.',
+    image: '',
+    technologies: ['React', 'Node.js'],
+    features: [
+      'Responsive design'
+    ],
+    year: 2023
+  },
+  {
+    id: 'dsleep',
+    title: 'DSLEEP',
+    category: 'Web Development',
+    description: 'Project for DSleep.',
+    longDescription: 'Developed a web project for DSleep.',
+    image: '',
+    technologies: ['React', 'Node.js'],
+    features: [
+      'Responsive design'
+    ],
     year: 2023
   }
 ];
