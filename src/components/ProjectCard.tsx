@@ -25,7 +25,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
       transition={{ duration: 0.4, delay: index * 0.1 }}
     >
       <div className="project-card__image">
-        <img src={project.image} alt={project.title} />
+        <img src={project.image} alt={project.title} loading="lazy" />
       </div>
       
       <div className="project-card__content">
