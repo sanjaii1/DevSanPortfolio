@@ -31,12 +31,27 @@ app.post('/api/contact', async (req, res) => {
     await transporter.sendMail({
       from: `"${name}" <${email}>`,
       to: process.env.EMAIL_TO,
-      subject: subject || 'New Contact Form Submission',
+      subject: subject ? `${subject} (from ${name})` : `New Contact Form Submission (from ${name})`,
       text: message,
-      html: `<p><b>Name:</b> ${name}</p>
-             <p><b>Email:</b> ${email}</p>
-             <p><b>Subject:</b> ${subject}</p>
-             <p><b>Message:</b><br/>${message}</p>`,
+      html: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; border:1px solid #eee; border-radius:8px; overflow:hidden;">
+          <div style="background: #0ea5e9; color: #fff; padding: 20px 30px;">
+            <h2 style="margin:0;">New Contact Form Submission</h2>
+          </div>
+          <div style="padding: 30px; background: #fafbfc;">
+            <p><strong>Name:</strong> ${name}</p>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Subject:</strong> ${subject || '(No subject)'}</p>
+            <p><strong>Message:</strong></p>
+            <div style="background: #f1f5f9; padding: 15px; border-radius: 5px; margin-top: 5px; white-space: pre-line;">
+              ${message}
+            </div>
+          </div>
+          <div style="background: #f1f5f9; color: #64748b; padding: 15px 30px; font-size: 12px;">
+            <p style="margin:0;">This message was sent from your portfolio contact form.</p>
+          </div>
+        </div>
+      `,
     });
 
     res.json({ success: true, message: 'Email sent successfully!' });
