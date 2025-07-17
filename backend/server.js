@@ -5,7 +5,10 @@ const nodemailer = require('nodemailer');
 
 const app = express();
 const corsOptions = {
-  origin: 'http://localhost:5173', // Replace with your frontend URL if different
+  origin: [
+    'http://localhost:5173',
+    'https://sanjai-portfolio-delta.vercel.app'
+  ],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
 };
 app.use(cors(corsOptions));
