@@ -142,7 +142,7 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.6 }}
               style={{ marginTop: 'var(--spacing-lg)' }}
             >
-              <a href="/resume.pdf" className="button primary" download>
+              <a href="/public/resume.pdf" className="button primary" download>
                 <Download size={16} style={{ marginRight: '0.5rem' }} />
                 Download Resume
               </a>
