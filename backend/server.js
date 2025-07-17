@@ -52,6 +52,12 @@ app.post('/api/contact', async (req, res) => {
           </div>
         </div>
       `,
+      priority: 'high',
+      headers: {
+        'X-Priority': '1 (Highest)',
+        'X-MSMail-Priority': 'High',
+        Importance: 'High'
+      }
     });
 
     res.json({ success: true, message: 'Email sent successfully!' });
