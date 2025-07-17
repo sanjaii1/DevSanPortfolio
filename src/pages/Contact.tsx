@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, AlertCircle, CheckCircle } from 'lucide-react';
+import { sendContactForm } from '../api/contactApi'; // adjust path if needed
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -21,7 +22,7 @@ const Contact = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     // Validate form
@@ -34,27 +35,27 @@ const Contact = () => {
       return;
     }
 
-    // Simulate form submission
-    setTimeout(() => {
+    setFormStatus(null);
+
+    try {
+      const data = await sendContactForm(formData);
       setFormStatus({
         submitted: true,
-        success: true,
-        message: 'Your message has been sent successfully. I will get back to you soon!'
+        success: data.success,
+        message: data.message,
       });
 
-      // Reset form after successful submission
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
+      if (data.success) {
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        setTimeout(() => setFormStatus(null), 5000);
+      }
+    } catch (error) {
+      setFormStatus({
+        submitted: true,
+        success: false,
+        message: 'Failed to send message. Please try again later.',
       });
-
-      // Clear success message after 5 seconds
-      setTimeout(() => {
-        setFormStatus(null);
-      }, 5000);
-    }, 1000);
+    }
   };
 
   const pageVariants = {
