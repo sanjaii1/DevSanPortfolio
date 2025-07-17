@@ -9,9 +9,9 @@ const About = () => {
   const toolsAndOtherSkills = [...getSkillsByCategory('tools'), ...getSkillsByCategory('other')];
   
   const stats = [
-    { icon: <Calendar size={24} />, value: '1.5+', label: 'Years Experience' },
-    { icon: <Award size={24} />, value: '10+', label: 'Projects Completed' },
-    { icon: <Users size={24} />, value: '5+', label: 'Happy Clients' },
+    { icon: <Calendar size={24} />, value: '2.5+', label: 'Years Experience' },
+    { icon: <Award size={24} />, value: '60+', label: 'Projects Completed' },
+    { icon: <Users size={24} />, value: '20+', label: 'Happy Clients' },
   ];
   
   const experiences = [
