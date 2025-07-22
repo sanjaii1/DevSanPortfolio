@@ -66,9 +66,43 @@ export const projects: Project[] = [
     year: 2024
   },
   {
+    id: 'smarter-home-website',
+    title: 'SMARTER HOME WEBSITE',
+    category: 'Web Application',
+    description: 'Corporate website for Smarter Home.',
+    longDescription: 'Designed and developed a modern, responsive portfolio website for Anuraglr to showcase projects, skills, and experience. Implemented a clean UI, smooth navigation, and optimized performance for a professional online presence.',
+    image: 'https://res.cloudinary.com/dfbauxmin/image/upload/v1753211828/smarthome_bircvy.png',
+    technologies: ['html', 'css', 'javascript'],
+    features: [
+      'E-commerce functionality',
+      'Product catalog',
+      'Shopping cart',
+      'Responsive design'
+    ],
+    liveUrl: 'https://smarterhome.in/',
+    year: 2024
+  },
+  {
+    id: 'tgf-website',
+    title: 'TGF WEBSITE',
+    category: 'CRM',
+    description: 'CRM website for TGF.',
+    longDescription: 'Designed and developed a modern, responsive portfolio website for Anuraglr to showcase projects, skills, and experience. Implemented a clean UI, smooth navigation, and optimized performance for a professional online presence.',
+    image: 'https://res.cloudinary.com/dfbauxmin/image/upload/v1753211829/tgf_jxynt3.png',
+    technologies: ['html', 'css', 'javascript'],
+    features: [
+      'CRM functionality',
+      'Product catalog',
+      'Shopping cart',
+      'Responsive design'
+    ],
+    liveUrl: 'https://tgf.in/',
+    year: 2024
+  },
+  {
     id: 'hawksee',
     title: 'HAWKSEE',
-    category: 'Web Development',
+    category: 'Interactive Website',
     description: 'Agency website for Hawksee.',
     longDescription: 'Developed a professional agency website for Hawksee, focusing on branding and lead generation.',
     image: 'https://res.cloudinary.com/dfbauxmin/image/upload/v1753209437/hawksee_jih6qw.png',
