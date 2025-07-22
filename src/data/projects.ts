@@ -18,10 +18,10 @@ export const projects: Project[] = [
     id: 'rarichans-coconut-productl',
     title: "RARICHAN'S COCONUT PRODUCTL",
     category: 'Web Development',
-    description: 'Corporate website for coconut product company.',
+    description: 'Corporate website for coconut oil product company.',
     longDescription: 'Developed a modern, responsive website for Rarichan\'s Coconut Productl, showcasing products and company information.',
     image: 'https://res.cloudinary.com/dfbauxmin/image/upload/v1753209440/rari_l3v5w3.png',
-    technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
+    technologies: ['html', 'css', 'javascript'],
     features: [
       'Product showcase',
       'Responsive design',
@@ -38,7 +38,7 @@ export const projects: Project[] = [
     description: 'E-commerce website for a fancy mall.',
     longDescription: 'Built an e-commerce platform for Thilakkam Fancy Mall, enabling online product browsing and purchasing.',
     image: 'https://res.cloudinary.com/dfbauxmin/image/upload/v1753209440/thilakkam_jnabch.png',
-    technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
+    technologies: ['html', 'css', 'javascript'],
     features: [
       'E-commerce functionality',
       'Product catalog',
@@ -49,20 +49,37 @@ export const projects: Project[] = [
     year: 2023
   },
   {
+    id: 'anuraglr-website',
+    title: 'ANURAGLR PORTFOLIO WEBSITE',
+    category: 'Portfolio',
+    description: 'Portfolio website for Anuraglr.',
+    longDescription: 'Designed and developed a modern, responsive portfolio website for Anuraglr to showcase projects, skills, and experience. Implemented a clean UI, smooth navigation, and optimized performance for a professional online presence.',
+    image: 'https://res.cloudinary.com/dfbauxmin/image/upload/v1753210498/anurag_sn3g2r.png',
+    technologies: ['html', 'css', 'javascript'],
+    features: [
+      'Portfolio website',
+      'Project showcase',
+      'Skills and experience',
+      'Responsive design'
+    ],
+    liveUrl: 'https://lranurag5.web.app/',
+    year: 2024
+  },
+  {
     id: 'hawksee',
     title: 'HAWKSEE',
     category: 'Web Development',
     description: 'Agency website for Hawksee.',
     longDescription: 'Developed a professional agency website for Hawksee, focusing on branding and lead generation.',
     image: 'https://res.cloudinary.com/dfbauxmin/image/upload/v1753209437/hawksee_jih6qw.png',
-    technologies: ['React', 'Next.js', 'Node.js'],
+    technologies: ['React', 'Sass', 'javaScript'],
     features: [
       'Brand showcase',
       'Contact form',
       'Responsive design'
     ],
     liveUrl: 'https://hawksee.agency/',
-    year: 2023
+    year: 2024
   },
   {
     id: 'limotex',
@@ -71,14 +88,14 @@ export const projects: Project[] = [
     description: 'Corporate website for Limotex.',
     longDescription: 'Created a modern, responsive website for Limotex to highlight their services and products.',
     image: 'https://res.cloudinary.com/dfbauxmin/image/upload/v1753209439/limotex_p5cpxa.png',
-    technologies: ['React', 'Node.js'],
+    technologies: ['React', 'Sass', 'javaScript'],
     features: [
       'Service showcase',
       'Contact form',
       'Responsive design'
     ],
     liveUrl: 'https://limotex.in/',
-    year: 2023
+    year: 2025
   },
   {
     id: 'skymark',
@@ -87,14 +104,14 @@ export const projects: Project[] = [
     description: 'Corporate website for Skymark.',
     longDescription: 'Developed a responsive website for Skymark, focusing on company profile and service offerings.',
     image: 'https://res.cloudinary.com/dfbauxmin/image/upload/v1753209439/skymark_yordtt.png',
-    technologies: ['React', 'Node.js'],
+    technologies: ['React', 'Sass', 'javaScript','node.js'],
     features: [
       'Company profile',
       'Service showcase',
       'Responsive design'
     ],
     liveUrl: 'https://www.skymark.in/',
-    year: 2023
+    year: 2025
   },
   {
     id: 'drshareef',
@@ -103,13 +120,13 @@ export const projects: Project[] = [
     description: 'Professional website for Dr. Shareef.',
     longDescription: 'Developed a professional website for Dr. Shareef to showcase services and provide contact information.',
     image: '',
-    technologies: ['React', 'Node.js'],
+    technologies: ['React', 'Sass', 'javaScript'],
     features: [
       'Professional profile',
       'Contact form',
       'Responsive design'
     ],
-    year: 2023
+    year: 2025
   },
   {
     id: 'hiline',
@@ -125,7 +142,7 @@ export const projects: Project[] = [
       'Responsive design'
     ],
     liveUrl: 'https://www.hilinedevelopers.com/lander',
-    year: 2023
+    year: 2024
   },
   {
     id: 'motorcraze',
@@ -142,7 +159,7 @@ export const projects: Project[] = [
       'Responsive design'
     ],
     liveUrl: 'https://www.motocraze.co.in/',
-    year: 2023
+    year: 2025
   },
   {
     id: 'lalsonelectronics',
@@ -158,7 +175,7 @@ export const projects: Project[] = [
       'Responsive design'
     ],
     liveUrl: 'https://www.lalsonselectronics.com/',
-    year: 2023
+    year: 2025
   },
   {
     id: 'luxart',
@@ -174,7 +191,7 @@ export const projects: Project[] = [
       'Responsive design'
     ],
     liveUrl: 'https://www.luxartbuilders.com/',
-    year: 2023
+    year: 2025
   },
   {
     id: 'habitat',
@@ -187,7 +204,7 @@ export const projects: Project[] = [
     features: [
       'Responsive design'
     ],
-    year: 2023
+    year: 2025
   },
   {
     id: 'skillhand',
@@ -200,7 +217,7 @@ export const projects: Project[] = [
     features: [
       'Responsive design'
     ],
-    year: 2023
+    year: 2025
   },
   {
     id: 'yas',
@@ -213,7 +230,7 @@ export const projects: Project[] = [
     features: [
       'Responsive design'
     ],
-    year: 2023
+    year: 2025
   },
   {
     id: 'dsleep',
@@ -226,7 +243,7 @@ export const projects: Project[] = [
     features: [
       'Responsive design'
     ],
-    year: 2023
+    year: 2025
   }
 ];
 
