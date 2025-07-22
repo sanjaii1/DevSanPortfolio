@@ -20,7 +20,7 @@ export const projects: Project[] = [
     category: 'Web Development',
     description: 'Corporate website for coconut product company.',
     longDescription: 'Developed a modern, responsive website for Rarichan\'s Coconut Productl, showcasing products and company information.',
-    image: 'https://www.rarichanscoconut.com/assets/images/logo.png',
+    image: 'https://res.cloudinary.com/dfbauxmin/image/upload/v1753209440/rari_l3v5w3.png',
     technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
     features: [
       'Product showcase',
@@ -37,7 +37,7 @@ export const projects: Project[] = [
     category: 'Web Development',
     description: 'E-commerce website for a fancy mall.',
     longDescription: 'Built an e-commerce platform for Thilakkam Fancy Mall, enabling online product browsing and purchasing.',
-    image: 'https://thilakkamfancy.in/assets/images/logo.png',
+    image: 'https://res.cloudinary.com/dfbauxmin/image/upload/v1753209440/thilakkam_jnabch.png',
     technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
     features: [
       'E-commerce functionality',
@@ -54,7 +54,7 @@ export const projects: Project[] = [
     category: 'Web Development',
     description: 'Agency website for Hawksee.',
     longDescription: 'Developed a professional agency website for Hawksee, focusing on branding and lead generation.',
-    image: 'https://hawksee.agency/logo.png',
+    image: 'https://res.cloudinary.com/dfbauxmin/image/upload/v1753209437/hawksee_jih6qw.png',
     technologies: ['React', 'Next.js', 'Node.js'],
     features: [
       'Brand showcase',
@@ -70,7 +70,7 @@ export const projects: Project[] = [
     category: 'Web Development',
     description: 'Corporate website for Limotex.',
     longDescription: 'Created a modern, responsive website for Limotex to highlight their services and products.',
-    image: 'https://limotex.in/logo.png',
+    image: 'https://res.cloudinary.com/dfbauxmin/image/upload/v1753209439/limotex_p5cpxa.png',
     technologies: ['React', 'Node.js'],
     features: [
       'Service showcase',
@@ -86,7 +86,7 @@ export const projects: Project[] = [
     category: 'Web Development',
     description: 'Corporate website for Skymark.',
     longDescription: 'Developed a responsive website for Skymark, focusing on company profile and service offerings.',
-    image: 'https://www.skymark.in/logo.png',
+    image: 'https://res.cloudinary.com/dfbauxmin/image/upload/v1753209439/skymark_yordtt.png',
     technologies: ['React', 'Node.js'],
     features: [
       'Company profile',
@@ -117,7 +117,7 @@ export const projects: Project[] = [
     category: 'Web Development',
     description: 'Landing page for Hiline Developers.',
     longDescription: 'Created a high-converting landing page for Hiline Developers.',
-    image: 'https://www.hilinedevelopers.com/lander/logo.png',
+    image: 'https://res.cloudinary.com/dfbauxmin/image/upload/v1753209439/hiline_l5scjr.png',
     technologies: ['React', 'Node.js'],
     features: [
       'Landing page',
@@ -133,7 +133,7 @@ export const projects: Project[] = [
     category: 'Web Development',
     description: 'Automotive e-commerce website.',
     longDescription: 'Developed an e-commerce website for Motorcraze, specializing in automotive products.',
-    image: 'https://www.motocraze.co.in/logo.png',
+    image: 'https://res.cloudinary.com/dfbauxmin/image/upload/v1753209618/moto_fkzgv0.png',
     technologies: ['React', 'Node.js', 'MongoDB'],
     features: [
       'E-commerce functionality',
@@ -150,7 +150,7 @@ export const projects: Project[] = [
     category: 'Web Development',
     description: 'Corporate website for Lalson Electronics.',
     longDescription: 'Developed a modern, responsive website for Lalson Electronics.',
-    image: 'https://www.lalsonselectronics.com/logo.png',
+    image: 'https://res.cloudinary.com/dfbauxmin/image/upload/v1753209439/lalson_ohpugx.png',
     technologies: ['React', 'Node.js'],
     features: [
       'Product showcase',
@@ -166,7 +166,7 @@ export const projects: Project[] = [
     category: 'Web Development',
     description: 'Corporate website for Luxart Builders.',
     longDescription: 'Created a modern, responsive website for Luxart Builders.',
-    image: 'https://www.luxartbuilders.com/logo.png',
+    image: 'https://res.cloudinary.com/dfbauxmin/image/upload/v1753209439/luxart_grbhgr.png',
     technologies: ['React', 'Node.js'],
     features: [
       'Service showcase',
