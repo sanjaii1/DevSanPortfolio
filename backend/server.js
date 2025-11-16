@@ -1,73 +1,77 @@
-require('dotenv').config();
-const express = require('express');
-const cors = require('cors');
-const nodemailer = require('nodemailer');
+import nodemailer from 'nodemailer';
 
-const app = express();
-const corsOptions = {
-  origin: [
-    'http://localhost:5173',
-    'https://sanjai-portfolio-delta.vercel.app'
-  ],
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
-};
-app.use(cors(corsOptions));
-app.use(express.json());
-
-app.post('/api/contact', async (req, res) => {
-  const { name, email, subject, message } = req.body;
-
-  if (!name || !email || !message) {
-    return res.status(400).json({ success: false, message: 'Missing required fields.' });
-  }
-
-  // Configure your transporter (use your real email and app password or SMTP config)
-  let transporter = nodemailer.createTransport({
+// Create transporter for nodemailer
+const createTransporter = () => {
+  return nodemailer.createTransport({
     service: 'gmail',
     auth: {
       user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASS,
     },
   });
+};
 
+// Handle contact form submissions
+export const handleContact = async (req, res) => {
   try {
-    await transporter.sendMail({
-      from: `"${name}" <${email}>`,
-      to: process.env.EMAIL_TO,
-      subject: subject ? `${subject} (from ${name})` : `New Contact Form Submission (from ${name})`,
-      text: message,
+    const { name, email, subject, message } = req.body;
+
+    // Validate required fields
+    if (!name || !email || !message) {
+      return res.status(400).json({
+        success: false,
+        message: 'Please fill out all required fields.'
+      });
+    }
+
+    // Create email transporter
+    const transporter = createTransporter();
+
+    // Email content
+    const mailOptions = {
+      from: process.env.EMAIL_USER,
+      to: process.env.EMAIL_TO || process.env.EMAIL_USER,
+      subject: subject || `New Contact Form Submission from ${name}`,
       html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; border:1px solid #eee; border-radius:8px; overflow:hidden;">
-          <div style="background: #0ea5e9; color: #fff; padding: 20px 30px;">
-            <h2 style="margin:0;">New Contact Form Submission</h2>
-          </div>
-          <div style="padding: 30px; background: #fafbfc;">
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+          <h2 style="color: #333; border-bottom: 2px solid #007bff; padding-bottom: 10px;">New Contact Form Submission</h2>
+          
+          <div style="margin: 20px 0;">
+            <h3 style="color: #555; margin-bottom: 10px;">Contact Information</h3>
             <p><strong>Name:</strong> ${name}</p>
             <p><strong>Email:</strong> ${email}</p>
-            <p><strong>Subject:</strong> ${subject || '(No subject)'}</p>
-            <p><strong>Message:</strong></p>
-            <div style="background: #f1f5f9; padding: 15px; border-radius: 5px; margin-top: 5px; white-space: pre-line;">
-              ${message}
+            ${subject ? `<p><strong>Subject:</strong> ${subject}</p>` : ''}
+          </div>
+          
+          <div style="margin: 20px 0;">
+            <h3 style="color: #555; margin-bottom: 10px;">Message</h3>
+            <div style="background-color: #f8f9fa; padding: 15px; border-radius: 5px; border-left: 4px solid #007bff;">
+              ${message.replace(/\n/g, '<br>')}
             </div>
           </div>
-          <div style="background: #f1f5f9; color: #64748b; padding: 15px 30px; font-size: 12px;">
-            <p style="margin:0;">This message was sent from your portfolio contact form.</p>
+          
+          <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; color: #666; font-size: 12px;">
+            <p>This email was sent from your portfolio contact form.</p>
+            <p>Sent on: ${new Date().toLocaleString()}</p>
           </div>
         </div>
       `,
-      priority: 'high',
-      headers: {
-        'X-Priority': '1 (Highest)',
-        'X-MSMail-Priority': 'High',
-        Importance: 'High'
-      }
+    };
+
+    // Send email
+    await transporter.sendMail(mailOptions);
+
+    res.status(200).json({
+      success: true,
+      message: 'Message sent successfully!'
     });
 
-    res.json({ success: true, message: 'Email sent successfully!' });
   } catch (error) {
-    res.status(500).json({ success: false, message: 'Failed to send email.', error: error.message });
+    console.error('Error sending email:', error);
+    
+    res.status(500).json({
+      success: false,
+      message: 'Failed to send message. Please try again later.'
+    });
   }
-});
-
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+};

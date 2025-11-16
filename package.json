@@ -5,13 +5,18 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host",
+    "dev:server": "node backend/index.js",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
     "framer-motion": "^10.16.4",
     "lucide-react": "^0.344.0",
+    "nodemailer": "^7.0.10",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.22.0",

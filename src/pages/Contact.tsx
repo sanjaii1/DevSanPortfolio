@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, AlertCircle, CheckCircle } from 'lucide-react';
-import { sendContactForm } from '../api/contactApi'; // adjust path if needed
+
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -35,25 +35,44 @@ const Contact = () => {
       return;
     }
 
-    setFormStatus(null);
+    setFormStatus({
+      submitted: true,
+      success: false,
+      message: 'Sending message...'
+    });
 
     try {
-      const data = await sendContactForm(formData);
-      setFormStatus({
-        submitted: true,
-        success: data.success,
-        message: data.message,
+      const response = await fetch('http://localhost:3001/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
 
-      if (data.success) {
-        setFormData({ name: '', email: '', subject: '', message: '' });
-        setTimeout(() => setFormStatus(null), 5000);
+      const result = await response.json();
+
+      setFormStatus({
+        submitted: true,
+        success: result.success,
+        message: result.message
+      });
+
+      // Reset form if successful
+      if (result.success) {
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
       }
     } catch (error) {
+      console.error('Error submitting form:', error);
       setFormStatus({
         submitted: true,
         success: false,
-        message: 'Failed to send message. Please try again later.',
+        message: 'Failed to send message. Please try again later.'
       });
     }
   };
