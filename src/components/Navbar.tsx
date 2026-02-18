@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Code, Moon, Sun } from 'lucide-react';
 import { ThemeContext } from '../context/ThemeContext';
@@ -9,12 +9,13 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const { theme, toggleTheme } = useContext(ThemeContext);
   const location = useLocation();
-  
+  const navigate = useNavigate();
+
   // Close mobile menu when route changes
   useEffect(() => {
     setIsMenuOpen(false);
   }, [location]);
-  
+
   // Handle scroll events for navbar styling
   useEffect(() => {
     const handleScroll = () => {
@@ -24,20 +25,20 @@ const Navbar = () => {
         setScrolled(false);
       }
     };
-    
+
     window.addEventListener('scroll', handleScroll);
-    
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     // Prevent scrolling when menu is open
     document.body.style.overflow = isMenuOpen ? 'auto' : 'hidden';
   };
-  
+
   const navVariants = {
     hidden: { opacity: 0, y: -20 },
     visible: {
@@ -49,31 +50,33 @@ const Navbar = () => {
       },
     },
   };
-  
+
   const itemVariants = {
     hidden: { opacity: 0, y: -10 },
     visible: { opacity: 1, y: 0 },
   };
-  
+
   const mobileNavVariants = {
     closed: { x: '100%' },
     open: { x: 0 },
   };
-  
+
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar__container">
-        <motion.div 
+        <motion.div
           className="navbar__logo"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
+          onClick={() => navigate('/')}
+          style={{ cursor: 'pointer' }}
         >
           <Code size={24} />
           <span>SANJA!</span>
         </motion.div>
-        
-        <motion.ul 
+
+        <motion.ul
           className="navbar__menu"
           variants={navVariants}
           initial="hidden"
@@ -92,8 +95,8 @@ const Navbar = () => {
             <NavLink to="/contact">Contact</NavLink>
           </motion.li>
           <motion.li variants={itemVariants}>
-            <button 
-              className="navbar__theme-toggle" 
+            <button
+              className="navbar__theme-toggle"
               onClick={toggleTheme}
               aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
             >
@@ -101,17 +104,17 @@ const Navbar = () => {
             </button>
           </motion.li>
         </motion.ul>
-        
-        <div 
-          className={`navbar__hamburger ${isMenuOpen ? 'open' : ''}`} 
+
+        <div
+          className={`navbar__hamburger ${isMenuOpen ? 'open' : ''}`}
           onClick={toggleMenu}
         >
           <span></span>
           <span></span>
           <span></span>
         </div>
-        
-        <motion.div 
+
+        <motion.div
           className={`navbar__mobile ${isMenuOpen ? 'open' : ''}`}
           variants={mobileNavVariants}
           initial="closed"
@@ -132,8 +135,8 @@ const Navbar = () => {
               <NavLink to="/contact" onClick={toggleMenu}>Contact</NavLink>
             </li>
             <li>
-              <button 
-                className="navbar__theme-toggle" 
+              <button
+                className="navbar__theme-toggle"
                 onClick={toggleTheme}
                 aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
               >

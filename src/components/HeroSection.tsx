@@ -37,7 +37,7 @@ const HeroSection = () => {
           >
             SANJAI BABU S
             <br />
-            <span>Web Developer</span>
+            <span>Full Stack Developer</span>
           </motion.h1>
           
           <motion.p 

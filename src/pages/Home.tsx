@@ -10,12 +10,13 @@ import { ArrowRight } from 'lucide-react';
 const Home = () => {
   // Only show featured projects (first 3)
   const featuredProjects = projects.slice(0, 3);
-  
+
   // Only show top skills (first 6)
-  const topSkills = skills
-    .sort((a, b) => b.percentage - a.percentage)
-    .slice(0, 6);
-  
+  // Only show top skills (specific MERN stack)
+  const topSkills = skills.filter(skill =>
+    ['React.js', 'Next.js', 'Node.js', 'Express.js', 'RESTful APIs', 'MongoDB'].includes(skill.name)
+  );
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -24,25 +25,25 @@ const Home = () => {
       transition={{ duration: 0.5 }}
     >
       <HeroSection />
-      
+
       {/* About Section Preview */}
       <section className="section about">
         <div className="about__container">
-          <motion.div 
+          <motion.div
             className="about__image"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6 }}
           >
-            <img 
-              src="https://images.pexels.com/photos/4974915/pexels-photo-4974915.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-              alt="John Doe" 
+            <img
+              src="https://images.pexels.com/photos/4974915/pexels-photo-4974915.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              alt="John Doe"
             />
           </motion.div>
-          
+
           <div className="about__content">
-            <motion.div 
+            <motion.div
               className="about__content-title"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -52,8 +53,8 @@ const Home = () => {
               <p className="subtitle">About Me</p>
               <h2>A dedicated Web Developer based in New York</h2>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               className="about__content-text"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -67,9 +68,9 @@ const Home = () => {
                 My approach to development focuses on writing clean, maintainable code and staying up-to-date with the latest industry trends and best practices.
               </p>
             </motion.div>
-            
+
             <div className="about__skills">
-              <motion.h3 
+              <motion.h3
                 className="about__skills-title"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -78,7 +79,7 @@ const Home = () => {
               >
                 My Skills
               </motion.h3>
-              
+
               <div className="about__skills-list">
                 {topSkills.map((skill, index) => (
                   <SkillBar
@@ -89,7 +90,7 @@ const Home = () => {
                   />
                 ))}
               </div>
-              
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -105,12 +106,12 @@ const Home = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Projects Section Preview */}
       <section className="section projects">
         <div className="projects__container">
           <div className="projects__header">
-            <motion.p 
+            <motion.p
               className="projects__header-subtitle"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -119,8 +120,8 @@ const Home = () => {
             >
               My Work
             </motion.p>
-            
-            <motion.h2 
+
+            <motion.h2
               className="projects__header-title"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -129,8 +130,8 @@ const Home = () => {
             >
               Featured Projects
             </motion.h2>
-            
-            <motion.p 
+
+            <motion.p
               className="projects__header-description"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -140,18 +141,18 @@ const Home = () => {
               Here are some of my recent projects. Each one was carefully crafted with attention to detail, performance, and user experience.
             </motion.p>
           </div>
-          
+
           <div className="projects__grid">
             {featuredProjects.map((project, index) => (
-              <ProjectCard 
-                key={project.id} 
-                project={project} 
+              <ProjectCard
+                key={project.id}
+                project={project}
                 index={index}
               />
             ))}
           </div>
-          
-          <motion.div 
+
+          <motion.div
             className="projects__more"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -164,11 +165,11 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
-      
+
       {/* Contact CTA Section */}
       <section className="section">
         <div className="container">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
