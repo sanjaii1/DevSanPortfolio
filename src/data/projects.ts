@@ -248,7 +248,7 @@ export const projects: Project[] = [
     category: 'Web Development',
     description: 'Landing page for Hiline Developers.',
     longDescription: 'Created a high-converting landing page for Hiline Developers.',
-    image: 'https://res.cloudinary.com/dfbauxmin/image/upload/v1753209439/hiline_l5scjr.png',
+    image: 'https://res.cloudinary.com/dfbauxmin/image/upload/v1771446261/hiline_ej0v17.png',
     technologies: ['React', 'Node.js'],
     features: [
       'Landing page',
